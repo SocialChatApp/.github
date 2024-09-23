@@ -1,4 +1,5 @@
-# Friend Fusion
+<details>
+<summary><strong>Friend Fusion</strong> (Türkçe)</summary>
 Hoşgeldiniz.
 
 # Proje Açıklaması
@@ -10,7 +11,7 @@ Bu proje, kullanıcıların gerçek zamanlı sohbet edebileceği ve içerik payl
 - **Gerçek Zamanlı İletişim**: Meeting sayfasına giderek anlık sohbet odaları oluşturabilir, mevcut odalara katılabilir ve diğer kullanıcılarla iletişim kurabilirler.
 - **Post Paylaşımı**: Kullanıcılar, gönderi paylaşıp bunlara yorum yapabilir ve diğer kullanıcıların paylaşımlarını görüntüleyebilirler.
 
-### Back-End - api-be
+### Back-End 
 **api-be**, NestJS tabanlı bir API sunmaktadır. Bu API aşağıdaki özellikleri içermektedir:
 - **JWT ve 2FA**: Kullanıcı kimlik doğrulaması ve iki faktörlü kimlik doğrulama desteği.
 - **Özel Hata Yönetimi**: Özel hata yönetim sistemi ile kullanıcı deneyimi artırılmıştır.
@@ -21,7 +22,7 @@ Bu proje, kullanıcıların gerçek zamanlı sohbet edebileceği ve içerik payl
 - **Veritabanı**: Prisma ORM kullanılarak Neon Console üzerinden veritabanı bağlantıları sağlanmaktadır.
 - **Mailer**: Nodemailer sayesinde 2FA kısmında kullanıcılara kayıt olabilmeleri için gerekli 4 haneli kodu gönderebilme imkanı sağlamaktadır.
 
-```
+```typescript
 import { Injectable } from '@nestjs/common';
 import * as nodemailer from 'nodemailer';
 
@@ -68,7 +69,7 @@ REDIS_PORT="6379"
 ```
 
 
-### Front-End - app-fe
+### Front-End 
 **app-fe**, ReactJS ve Vite kullanılarak geliştirilmiş bir ön yüz uygulamasıdır. Aşağıdaki kütüphaneler kullanılmaktadır:
 - **Lottie Animasyonları**: Kullanıcı deneyimini zenginleştiren animasyonlar.
 - **Redux Toolkit**: Durum yönetimi için Redux kullanımı.
@@ -78,16 +79,16 @@ REDIS_PORT="6379"
 
 Router konfigürasyonları sayesinde, kullanıcı giriş yapmadığında otomatik yönlendirme yapılmakta; giriş yapmış kullanıcıların girebildiği sayfalara erişim kısıtlanmaktadır. Kullanıcılar, register veya login işlemi yaptıklarında verileri cookie olarak kaydedilir ve 7 gün boyunca tutulur. Access token geçerliliği sona erdiğinde, kullanıcı oturum zaman aşımına uğradığı bilgisi alır ve login sayfasına yönlendirilir.
 
-### Socket Server - server
-**server** repository'si, NestJS ile Socket.IO sunucusunu barındırmaktadır. **app-fe** ve **server** arasında iletişim sağlanmaktadır. Kullanıcılar, **meeting** sayfasına girdiklerinde lobby'e giriş yapar ve bilgiler sunucuya iletilir. Burada tüm bilgiler tutulmakta, oda oluşturma ve odalara katılma işlemleri gerçekleştirilebilmektedir.
+### Socket Server
+**Server** repository'si, NestJS ile Socket.IO sunucusunu barındırmaktadır. **app-fe** ve **server** arasında iletişim sağlanmaktadır. Kullanıcılar, **meeting** sayfasına girdiklerinde lobby'e giriş yapar ve bilgiler sunucuya iletilir. Burada tüm bilgiler tutulmakta, oda oluşturma ve odalara katılma işlemleri gerçekleştirilebilmektedir.
 
 ## Port Yapılandırmaları
-- **api-be**: 3000 portunda
-- **app-fe**: 5173 portunda
-- **server**: 4000 portunda
-- **Redis**: 6380 portunda
+- **api-be**: 3000 
+- **app-fe**: 5173 
+- **server**: 4000 
+- **Redis**: 6380 
 
-Docker üzerinde Redis için port binding yapılmaktadır.
+Docker-Compose-Yaml üzerinde Redis için port binding yapılmaktadır.
 
 
 ## Docker Compose Yaml Dosyası
@@ -161,3 +162,4 @@ networks:
     name: backend
     driver: bridge
 ```
+</details>
