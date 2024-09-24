@@ -1,6 +1,6 @@
 [YouTube Video: Trailer](https://www.youtube.com/watch?v=1pF_iDZWcmU)
 
-<details>
+<details open>
 <summary><strong>Friend Fusion</strong> (Türkçe)</summary>
 Hoşgeldiniz.
 
