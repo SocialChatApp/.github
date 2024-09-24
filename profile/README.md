@@ -14,11 +14,11 @@ Bu proje, kullanıcıların gerçek zamanlı sohbet edebileceği ve içerik payl
 ### Back-End 
 **api-be**, NestJS tabanlı bir API sunmaktadır. Bu API aşağıdaki özellikleri içermektedir:
 - **JWT ve 2FA**: Kullanıcı kimlik doğrulaması ve iki faktörlü kimlik doğrulama desteği.
-- **Özel Hata Yönetimi**: Özel hata yönetim sistemi ile kullanıcı deneyimi artırılmıştır.
-- **Redis Cache Sistemi**: Performans iyileştirmeleri için Redis kullanılmaktadır.
+- **Custom Error Handling**: Özel hata yakala sistemi ile kullanıcı deneyimi ve projenin geliştirilebilirliği artırılmıştır.
+- **Redis Cache Sistemi**: Performans iyileştirmeleri için Redis kullanılmaktadır. Verify token kullanıcılara özel mail key and token olarak redis üzerinde tutulmaktadır.
 - **AWS S3**: Görsel içeriklerin bulutta saklanması için AWS S3 entegrasyonu.
 - **Güvenlik**: Tüm endpointlerde guard kullanılarak erişim güvenliği sağlanmıştır.
-- **Loglama**: Tüm istekler ve hata durumları için loglama yapılmaktadır.
+- **Loglama**: Tüm istekler ve hata durumları için loglama yapılmaktadır. Logs klasörü altından buna ulaşabilirsiniz.
 - **Veritabanı**: Prisma ORM kullanılarak Neon Console üzerinden veritabanı bağlantıları sağlanmaktadır.
 - **Mailer**: Nodemailer sayesinde 2FA kısmında kullanıcılara kayıt olabilmeleri için gerekli 4 haneli kodu gönderebilme imkanı sağlamaktadır.
 
