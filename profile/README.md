@@ -1,4 +1,4 @@
-[![Trailer](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=1pF_iDZWcmU)
+[YouTube Video: Trailer](https://www.youtube.com/watch?v=1pF_iDZWcmU)
 
 <details>
 <summary><strong>Friend Fusion</strong> (Türkçe)</summary>
