@@ -78,6 +78,7 @@ REDIS_PORT="6379"
 - **Axios**: API ile iletişim için Axios kullanılmaktadır.
 - **Material UI**: Kullanıcı arayüzü bileşenleri için Material UI.
 - **React Router DOM**: Sayfalar arası yönlendirme ve guard kontrolleri.
+- **Cookies**: Kullanıcı register veya login yaptığında cookie olarak verileri kaydedilir ve 7 gün boyunca tutulur. Bu sayede refresh yapıldığında veya sonradan sisteme tekrar girildiğinde tekrar login işlemi yapmamıza gerek kalmamaktadır.
 
 Router konfigürasyonları sayesinde, kullanıcı giriş yapmadığında otomatik yönlendirme yapılmakta; giriş yapmış kullanıcıların girebildiği sayfalara erişim kısıtlanmaktadır. Kullanıcılar, register veya login işlemi yaptıklarında verileri cookie olarak kaydedilir ve 7 gün boyunca tutulur. Access token geçerliliği sona erdiğinde, kullanıcı oturum zaman aşımına uğradığı bilgisi alır ve login sayfasına yönlendirilir.
 
